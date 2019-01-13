@@ -1,7 +1,5 @@
-# -*- coding: utf-8 -*-
-
 """Top-level package for Pong 19."""
 
 __author__ = """Yann Michel Le Coz"""
 __email__ = 'yann.lecoz@ynov.com'
-__version__ = '0.1.1'
+__version__ = '0.1.2'

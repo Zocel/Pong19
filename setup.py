@@ -5,8 +5,8 @@
 
 from setuptools import setup, find_packages
 
-with open("README.md", "r") as fh:
-    readme = fh.read()
+with open("README.md", "r") as readme_file:
+    readme = readme_file.read()
 
 setup(
     author="Yann Michel Le Coz",
@@ -34,6 +34,6 @@ setup(
     name='Pong19',
     packages=find_packages(),
     url='https://github.com/Zocel/Pong19',
-    version = '0.1.1',
+    version = '0.1.2',
     zip_safe=False,
 )
