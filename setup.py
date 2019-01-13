@@ -10,11 +10,12 @@ with open("README.md", "r") as fh:
 
 setup(
     name='Pong19',
-    version='0.1.0',
+    version='0.1',
     author="Yann Michel Le Coz",
     author_email='yann.lecoz@ynov.com',
     description="Cette application permet de jouer au jeu d'arcade Pong.",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url='https://github.com/Zocel/Pong19',
     packages=find_packages(),
     license="GNU General Public License v3",
