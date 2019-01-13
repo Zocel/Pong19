@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='Pong19',
-    version='0.1',
+    version='1.0',
     author="Yann Michel Le Coz",
     author_email='yann.lecoz@ynov.com',
     description="Cette application permet de jouer au jeu d'arcade Pong.",
