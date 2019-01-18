@@ -1,9 +1,7 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """The setup script."""
 
 from setuptools import setup, find_packages
+from Pong19_Zero import __version__
 
 with open("README.md", "r") as readme_file:
     readme = readme_file.read()
@@ -12,7 +10,7 @@ setup(
     author="Yann Michel Le Coz",
     author_email='yann.lecoz@ynov.com',
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Natural Language :: English',
@@ -30,10 +28,11 @@ setup(
     long_description=readme,
     long_description_content_type="text/markdown",
     include_package_data=True,
-    keywords='Pong19',
-    name='Pong19',
+    keywords='Pong19_Zero',
+    name='Pong19_Zero',
+    entry_points={'console_scripts':['mytool = Pong19_Zero.cli:main',]},
     packages=find_packages(),
-    url='https://github.com/Zocel/Pong19',
-    version = '0.1.2',
+    url='https://github.com/Zocel/Pong19_Zero',
+    version = __version__,
     zip_safe=False,
 )

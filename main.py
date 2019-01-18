@@ -1,3 +1,9 @@
+__name__ = "Pong19-Zero"
+__author__ = "LE COZ Yann"
+__copyright__ = "Copyright 2019"
+__version__ = "0.0.1"
+__email__ = "yann.lecoz@ynov.com"
+
 # Importation des librairies
 from tkinter import *
 import math

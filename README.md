@@ -1,5 +1,5 @@
 
-# Pong 19
+# Pong19 Zero
 L'objectif de ce projet est de programmer le jeu d'arcade *Pong* en **Python 3.6.7**
 ## Auteur
 **Yann LE COZ** - Bordeaux Ynov Campus Informatique - [Zocel](https://github.com/Zocel)
