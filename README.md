@@ -1,5 +1,5 @@
 
-# Pong19 Zero
+# Pong 19
 L'objectif de ce projet est de programmer le jeu d'arcade *Pong* en **Python 3.6.7**
 ## Auteur
 **Yann LE COZ** - Bordeaux Ynov Campus Informatique - [Zocel](https://github.com/Zocel)
@@ -57,7 +57,7 @@ Grâce à la liste déroulante *Taille de l'Arène* vous pouvez choisir entre **
 Le champ de saisie en-dessous de *Nombre de points gagnants*  vous permet d'entrer le nombre de points gagnants de la partie de jeu.
 
 > **Nombre de points gagnants** est égal à la *différence de score* du joueur de gauche et du joueur de droite.
-> Le nombre que vous entrerez  dans le champ de saisie doit être également **supérieur à 0**.
+> Le nombre que vous entrerez dans le champ de saisie devra également être **supérieur à 0**.
 
 ### Raquettes
 Grâce à la liste déroulante *Couleur des Raquettes* vous avez le choix entre **quatre** couleurs pour vos raquettes :

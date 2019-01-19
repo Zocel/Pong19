@@ -1,9 +1,3 @@
-__name__ = "Pong19-Zero"
-__author__ = "LE COZ Yann"
-__copyright__ = "Copyright 2019"
-__version__ = "0.0.1"
-__email__ = "yann.lecoz@ynov.com"
-
 # Importation des librairies
 from tkinter import *
 import math
@@ -16,6 +10,7 @@ settingview = None
 playview = None
 menuview = None
 pauseview = None
+warningview = None
 # Widgets
 sz_arena = None
 cr_arena = None
@@ -176,7 +171,7 @@ def open_setting():
     global settingview, menuview
     global sz_arena, cr_arena, cr_rackets, cr_ball
     global spd_ball
-    global winpoints
+    global winpoints, seizure_winpoints
 
     # Fermeture du Menu principal
     menuview.destroy()
@@ -376,11 +371,45 @@ def open_setting():
         Fonction permettant d'aller à l'écran de jeu à partir de la fenêtre
         "Configuration de la partie"
         """
-        global settingview
+        global settingview, winpoints
 
-        # Fermeture de l'écran de Configuration de la partie
-        settingview.destroy()
-        open_play()
+        def open_warning():
+            global warningview
+            global winpoints
+
+            # Définition des dimensions de la fenêtre "warningview"
+            warning_width = 100
+            warning_height = 100
+
+            # Affichage de l'écran de pause
+            warningview = Toplevel()
+            warningview.title("Nombre de points gagnants incorrecte")
+            warningview.transient(settingview)
+            # Empêchement de la redimensionner
+            warningview.resizable(width=False, height=False)
+            # Création du canvas "fen_warning"
+            fen_warning = Canvas(
+                warningview, width=warning_width, height=warning_height, bd=-1
+            )
+
+            # Création du bouton "Ok"
+            Button(
+                warningview,
+                text="Veuillez entrer un nouveau nombre de points gagnants",
+                activebackground="#11692A",
+                activeforeground="#CCFFCC",
+                borderwidth=2,
+                command=warningview.destroy,
+                font=("Roboto", "11"),
+            ).grid(row=2, column=2)
+
+        # Gestion des valeurs interdites
+        if winpoints.get() <= 0:
+            open_warning()
+        else:
+            # Fermeture de l'écran de Configuration de la partie
+            settingview.destroy()
+            open_play()
 
     # Création du bouton "Configurer la partie"
     Button(
