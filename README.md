@@ -94,8 +94,7 @@ Une fenêtre devra alors s'ouvrir pour vous indiquer que la partie en cours est 
 
 ## Fin de partie
 Une fois le nombre de points gagnants atteint, l'écran de jeu se ferme pour laisser place à un dernière écran : l'écran de **fin de partie**.
-Il résume la partie qui vient de se dérouler en affichant le **gagnant** et le **perdant** de la partie avec leur **score respectif** ainsi que la **durée** de celle-ci.
-> Le temps est affiché au format `HH : MM : SS`.
+Il résume la partie qui vient de se dérouler en affichant le **gagnant** et le **perdant** avec leur **taux de réussite respectif** en pourcentage. Il affiche également le **temps écoulé** de celle-ci au format `HH : MM : SS`.
 
 De plus, grâce aux boutons **`Refaire une partie`** et **`Aller au menu principal`** vous pouvez soit :
 * refaire une partie avec **les même configurations** que la précédentes ;

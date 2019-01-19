@@ -79,30 +79,38 @@ def open_endgame():
         Label(
             endgameview, text="Joueur Gauche", font=("Staatliches", "30")
         ).grid(row=3, column=1)
-        Label(endgameview, text=left_score, font=("Staatliches", "30")).grid(
-            row=4, column=1
-        )
+        Label(
+            endgameview,
+            text=f"{(left_score / (left_score + right_score)) * 100:.1f}",
+            font=("Staatliches", "25"),
+        ).grid(row=4, column=1)
         Label(
             endgameview, text="Joueur Droit", font=("Staatliches", "30")
         ).grid(row=3, column=3)
-        Label(endgameview, text=right_score, font=("Staatliches", "30")).grid(
-            row=4, column=3
-        )
+        Label(
+            endgameview,
+            text=f"{(right_score / (left_score + right_score)) * 100:.1f}",
+            font=("Staatliches", "25"),
+        ).grid(row=4, column=3)
         left_score = 0
         right_score = 0
     else:
         Label(
             endgameview, text="Joueur Droit", font=("Staatliches", "30")
         ).grid(row=3, column=1)
-        Label(endgameview, text=right_score, font=("Staatliches", "30")).grid(
-            row=4, column=1
-        )
+        Label(
+            endgameview,
+            text=f"{(right_score / (left_score + right_score)) * 100:.1f}",
+            font=("Staatliches", "25"),
+        ).grid(row=4, column=1)
         Label(
             endgameview, text="Joueur Gauche", font=("Staatliches", "30")
         ).grid(row=3, column=3)
-        Label(endgameview, text=left_score, font=("Staatliches", "30")).grid(
-            row=4, column=3
-        )
+        Label(
+            endgameview,
+            text=f"{(left_score / (left_score + right_score)) * 100:.1f}",
+            font=("Staatliches", "25"),
+        ).grid(row=4, column=3)
         left_score = 0
         right_score = 0
 
@@ -392,7 +400,7 @@ def open_setting():
                 warningview, width=warning_width, height=warning_height, bd=-1
             )
 
-            # Création du bouton "Ok"
+            # Création du bouton "Veuillez entrer un nouveau nombre de points gagnants"
             Button(
                 warningview,
                 text="Veuillez entrer un nouveau nombre de points gagnants",
@@ -404,7 +412,7 @@ def open_setting():
             ).grid(row=2, column=2)
 
         # Gestion des valeurs interdites
-        if winpoints.get() <= 0:
+        if winpoints.get() <= 0 or winpoints.get() > 30:
             open_warning()
         else:
             # Fermeture de l'écran de Configuration de la partie
