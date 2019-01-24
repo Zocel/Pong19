@@ -231,6 +231,9 @@ def open_setting():
     mnb_sz_arena.mnu_arena.add_radiobutton(
         label="Tournoi", variable=sz_arena, value=2
     )
+    mnb_sz_arena.mnu_arena.add_radiobutton(
+        label="Expert", variable=sz_arena, value=3
+    )
     # Création du bonton de menu "Couleur de l'Arène"
     mnb_cr_arena = Menubutton(
         settingview,
@@ -466,6 +469,9 @@ def open_play():
     elif sz_arena.get() == 2:
         play_width = 851
         play_height = 520
+    elif sz_arena.get() == 3:
+        play_width = 1917
+        play_height = 1050
     half_play_width = play_width / 2
     half_play_height = play_height / 2
     # Définition des dimensions des Buts
