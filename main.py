@@ -232,7 +232,7 @@ def open_setting():
         label="Tournoi", variable=sz_arena, value=2
     )
     mnb_sz_arena.mnu_arena.add_radiobutton(
-        label="Expert", variable=sz_arena, value=3
+        label="Étendue", variable=sz_arena, value=3
     )
     # Création du bonton de menu "Couleur de l'Arène"
     mnb_cr_arena = Menubutton(

@@ -49,6 +49,7 @@ Grâce à la liste déroulante *Taille de l'Arène* vous pouvez choisir entre **
 * **Entraînement**
 * **Basique**
 * **Tournoi**
+* **Étendue :** Cette configuration d'Arène est définie pour être seulement utilisée sur de grands écrans.
 #### Couleur de l'Arène
 À partir de la liste déroulante *Couleur de l'Arène* vous pouvez choisir **deux** thèmes de couleur :
 * **Défaut**
@@ -61,8 +62,7 @@ Le champ de saisie en-dessous de *Nombre de points gagnants*  vous permet d'entr
 
 ### Raquettes
 Grâce à la liste déroulante *Couleur des Raquettes* vous avez le choix entre **quatre** couleurs pour vos raquettes :
-* **Défaut**
-<br>La couleur des raquettes reste inchangée par rapport aux lignes de terrain.
+* **Défaut :** La couleur des raquettes reste inchangée par rapport aux lignes de terrain.
 * **Saphir**
 * **Émeraude**
 * **Rubis**
@@ -74,8 +74,7 @@ La liste déroulante *Vitesse de la balle* vous permet de choisir entre **trois*
 * **Rapide**
 #### Couleur de la Balle
 Grâce à la liste déroulante *Couleur de la Balle* vous avez le choix la balle entre les **quatre** couleurs suivantes :
-* **Défaut**
-<br>Tout comme la couleur des raquettes, la couleur de la balle reste inchangée par rapport aux lignes de terrain.
+* **Défaut :** Tout comme la couleur des raquettes, la couleur de la balle reste inchangée par rapport aux lignes de terrain.
 * **Saphir**
 * **Émeraude**
 * **Rubis**
