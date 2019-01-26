@@ -34,9 +34,6 @@ color_ball = None
 # Temps
 start_time = 0
 stop_time = 0
-# Bonus
-bonus = None
-color_bonus = None
 
 
 def open_endgame():
@@ -748,6 +745,7 @@ def open_play():
         fill=color_foreground,
     )
 
+    # Implémentation de la mise en pause d'une partie
     def pause_play(event):
         """
         Fonction permettant de mettre en pause une partie de jeu
