@@ -76,38 +76,30 @@ def open_endgame():
         Label(
             endgameview, text="Joueur Gauche", font=("Staatliches", "30")
         ).grid(row=3, column=1)
-        Label(
-            endgameview,
-            text=f"{(left_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=1)
+        Label(endgameview, text=left_score, font=("Staatliches", "25")).grid(
+            row=4, column=1
+        )
         Label(
             endgameview, text="Joueur Droit", font=("Staatliches", "30")
         ).grid(row=3, column=3)
-        Label(
-            endgameview,
-            text=f"{(right_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=3)
+        Label(endgameview, text=right_score, font=("Staatliches", "25")).grid(
+            row=4, column=3
+        )
         left_score = 0
         right_score = 0
     else:
         Label(
             endgameview, text="Joueur Droit", font=("Staatliches", "30")
         ).grid(row=3, column=1)
-        Label(
-            endgameview,
-            text=f"{(right_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=1)
+        Label(endgameview, text=right_score, font=("Staatliches", "25")).grid(
+            row=4, column=1
+        )
         Label(
             endgameview, text="Joueur Gauche", font=("Staatliches", "30")
         ).grid(row=3, column=3)
-        Label(
-            endgameview,
-            text=f"{(left_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=3)
+        Label(endgameview, text=left_score, font=("Staatliches", "25")).grid(
+            row=4, column=3
+        )
         left_score = 0
         right_score = 0
 

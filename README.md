@@ -49,7 +49,7 @@ Grâce à la liste déroulante *Taille de l'Arène* vous pouvez choisir entre **
 * **Entraînement**
 * **Basique**
 * **Tournoi**
-* **Étendue :** Cette configuration d'Arène est définie pour être seulement utilisée sur de grands écrans.
+* **Étendue :** Cette configuration d'Arène a été définie pour être seulement utilisée sur de grands écrans.
 #### Couleur de l'Arène
 À partir de la liste déroulante *Couleur de l'Arène* vous pouvez choisir **deux** thèmes de couleur :
 * **Défaut**
@@ -93,7 +93,7 @@ Une fenêtre devra alors s'ouvrir pour vous indiquer que la partie en cours est 
 
 ## Fin de partie
 Une fois le nombre de points gagnants atteint, l'écran de jeu se ferme pour laisser place à un dernière écran : l'écran de **fin de partie**.
-Il résume la partie qui vient de se dérouler en affichant le **gagnant** et le **perdant** avec leur **taux de réussite respectif** en pourcentage. Il affiche également le **temps écoulé** de celle-ci au format `HH : MM : SS`.
+Il résume la partie qui vient de se dérouler en affichant le **gagnant** et le **perdant** avec leur **score respectif** en pourcentage. Il affiche également le **temps écoulé** de celle-ci au format `HH : MM : SS`.
 
 De plus, grâce aux boutons **`Refaire une partie`** et **`Aller au menu principal`** vous pouvez soit :
 * refaire une partie avec **les même configurations** que la précédentes ;
