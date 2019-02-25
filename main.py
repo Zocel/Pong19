@@ -79,38 +79,30 @@ def open_endgame():
         Label(
             endgameview, text="Joueur Gauche", font=("Staatliches", "30")
         ).grid(row=3, column=1)
-        Label(
-            endgameview,
-            text=f"{(left_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=1)
+        Label(endgameview, text=left_score, font=("Staatliches", "25")).grid(
+            row=4, column=1
+        )
         Label(
             endgameview, text="Joueur Droit", font=("Staatliches", "30")
         ).grid(row=3, column=3)
-        Label(
-            endgameview,
-            text=f"{(right_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=3)
+        Label(endgameview, text=right_score, font=("Staatliches", "25")).grid(
+            row=4, column=3
+        )
         left_score = 0
         right_score = 0
     else:
         Label(
             endgameview, text="Joueur Droit", font=("Staatliches", "30")
         ).grid(row=3, column=1)
-        Label(
-            endgameview,
-            text=f"{(right_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=1)
+        Label(endgameview, text=right_score, font=("Staatliches", "25")).grid(
+            row=4, column=1
+        )
         Label(
             endgameview, text="Joueur Gauche", font=("Staatliches", "30")
         ).grid(row=3, column=3)
-        Label(
-            endgameview,
-            text=f"{(left_score / (left_score + right_score)) * 100:.1f}",
-            font=("Staatliches", "25"),
-        ).grid(row=4, column=3)
+        Label(endgameview, text=left_score, font=("Staatliches", "25")).grid(
+            row=4, column=3
+        )
         left_score = 0
         right_score = 0
 
@@ -151,6 +143,8 @@ def open_endgame():
     Button(
         endgameview,
         text="Refaire une partie",
+        background="#99CCFF",
+        foreground="#22427C",
         activebackground="#22427C",
         activeforeground="#99CCFF",
         font=("Roboto", "11"),
@@ -407,6 +401,8 @@ def open_setting():
             Button(
                 warningview,
                 text="Veuillez entrer un nouveau nombre de points gagnants",
+                background="#CCFFCC",
+                foreground="#11692A",
                 activebackground="#11692A",
                 activeforeground="#CCFFCC",
                 borderwidth=2,
@@ -426,6 +422,8 @@ def open_setting():
     Button(
         settingview,
         text="Configurer la partie",
+        background="#CCFFCC",
+        foreground="#11692A",
         activebackground="#11692A",
         activeforeground="#CCFFCC",
         font=("Roboto", "11"),
@@ -823,6 +821,8 @@ def open_play():
         Button(
             pauseview,
             text="Oui",
+            background="#99CCFF",
+            foreground="#22427C",
             activebackground="#22427C",
             activeforeground="#99CCFF",
             borderwidth=2,
@@ -832,6 +832,8 @@ def open_play():
         Button(
             pauseview,
             text="Non",
+            background="#FFCCCC",
+            foreground="#800000",
             activebackground="#800000",
             activeforeground="#FFCCCC",
             borderwidth=2,
@@ -873,6 +875,8 @@ def open_menu():
     btn_play = Button(
         menuview,
         text="Faire une partie",
+        background="#99CCFF",
+        foreground="#22427C",
         activebackground="#22427C",
         activeforeground="#99CCFF",
         font=("Roboto", "11"),
@@ -883,6 +887,8 @@ def open_menu():
     btn_exit = Button(
         menuview,
         text="Quitter",
+        background="#FFCCCC",
+        foreground="#800000",
         activebackground="#800000",
         activeforeground="#FFCCCC",
         font=("Roboto", "11"),
