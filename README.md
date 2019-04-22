@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/ianlcz/Pong19/blob/master/.icones/Pong19icon.png" title="Icone de l'application Pong19" width="100px">
+  <img src="https://github.com/ianlcz/Pong19/blob/master/.icones/playicon.png" title="Icone de l'application Pong19" width="100px">
 </p>
 
 # Pong19
