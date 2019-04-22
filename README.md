@@ -1,5 +1,8 @@
+<p align="center">
+  <img src="https://github.com/ianlcz/Pong19/blob/master/.icones/Pong19icon.png" title="Icone de l'application Pong19" width="100px">
+</p>
 
-# Pong 19
+# Pong19
 L'objectif de ce projet est de programmer le jeu d'arcade *Pong* en **Python 3.6.7**
 ## Auteur
 **Yann LE COZ** - Bordeaux Ynov Campus Informatique - [ianlcz](https://github.com/ianlcz)
