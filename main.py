@@ -53,7 +53,7 @@ def open_endgame():
     # Construction de la fenêtre principale "endgameview"
     endgameview = Tk()
     endgameview.title("Fin de Partie")
-    endgameicon = PhotoImage(file=".icones/endgameicon.png")
+    endgameicon = PhotoImage(file="favicon.png")
     endgameview.call("wm", "iconphoto", endgameview._w, endgameicon)
     # Empêchement de la redimensionner
     endgameview.resizable(width=False, height=False)
@@ -185,7 +185,7 @@ def open_setting():
     # Construction de la fenêtre principale "settingview"
     settingview = Tk()
     settingview.title("Configuration de la Partie")
-    settingicon = PhotoImage(file=".icones/settingicon.png")
+    settingicon = PhotoImage(file="favicon.png")
     settingview.call("wm", "iconphoto", settingview._w, settingicon)
     # Empêchement de la redimensionner
     settingview.resizable(width=False, height=False)
@@ -646,7 +646,7 @@ def open_play():
     # Construction de la fenêtre principale "playview"
     playview = Tk()
     playview.title("Partie de jeu")
-    playicon = PhotoImage(file=".icones/playicon.png")
+    playicon = PhotoImage(file="favicon.png")
     playview.call("wm", "iconphoto", playview._w, playicon)
     # Empêchement de la redimensionner
     playview.resizable(width=False, height=False)
@@ -864,7 +864,7 @@ def open_menu():
     # Construction de la fenêtre principale "menuview"
     menuview = Tk()
     menuview.title("Menu principal")
-    menuicon = PhotoImage(file=".icones/menuicon.png")
+    menuicon = PhotoImage(file="favicon.png")
     menuview.call("wm", "iconphoto", menuview._w, menuicon)
     # Empêchement de la redimensionner
     menuview.resizable(width=False, height=False)
