@@ -253,6 +253,9 @@ def open_setting():
     mnb_cr_arena.mnu_arena.add_radiobutton(
         label="Négatif", variable=cr_arena, value=1
     )
+    mnb_cr_arena.mnu_arena.add_radiobutton(
+        label="Blue Cercle", variable=cr_arena, value=2
+    )
 
     # Création du label "Nombre de points gagnants"
     lbl_winpoints = Label(
@@ -470,20 +473,20 @@ def open_play():
     elif sz_arena.get() == 3:
         play_width = 1917
         play_height = 1050
-    half_play_width = play_width / 2
-    half_play_height = play_height / 2
+    half_width_play = play_width / 2
+    half_height_play = play_height / 2
     # Définition des dimensions des Buts
     left_width_goal = 25 * play_width / 327
     right_width_goal = play_width - left_width_goal
-    middle_play_width = (half_play_width - left_width_goal) / 2
+    middle_width_play = (half_width_play - left_width_goal) / 2
     # Définition des variables de positionnement de la balle
-    primary_hposition_ball = half_play_width - 6
-    primary_vposition_ball = half_play_height - 6
-    secondary_hposition_ball = half_play_width + 6
-    secondary_vposition_ball = half_play_height + 6
+    primary_hposition_ball = half_width_play - 6
+    primary_vposition_ball = half_height_play - 6
+    secondary_hposition_ball = half_width_play + 6
+    secondary_vposition_ball = half_height_play + 6
     # Définition des variables des raquettes
-    min_racket_height = half_play_height - 40
-    max_racket_height = half_play_height + 40
+    min_height_racket = half_height_play - 40
+    max_height_racket = half_height_play + 40
 
     # Définition des couleurs de l'arrière-plan et du premier-plan
     if cr_arena.get() == 0:
@@ -492,6 +495,9 @@ def open_play():
     elif cr_arena.get() == 1:
         color_background = "white"
         color_foreground = "black"
+    elif cr_arena.get() == 2:
+        color_background = "white"
+        color_foreground = "#22427C"
 
     # Définition de la couleur des raquettes
     if cr_rackets.get() == 0:
@@ -564,8 +570,8 @@ def open_play():
                 fen_play.delete(display_right_score)
                 right_score += 1
                 display_right_score = fen_play.create_text(
-                    half_play_width + middle_play_width,
-                    half_play_height,
+                    half_width_play + middle_width_play,
+                    half_height_play,
                     text=right_score,
                     font=("Staatliches", "43"),
                     fill=color_foreground,
@@ -583,8 +589,8 @@ def open_play():
                 fen_play.delete(display_left_score)
                 left_score += 1
                 display_left_score = fen_play.create_text(
-                    half_play_width - middle_play_width,
-                    half_play_height,
+                    half_width_play - middle_width_play,
+                    half_height_play,
                     text=left_score,
                     font=("Staatliches", "43"),
                     fill=color_foreground,
@@ -661,63 +667,126 @@ def open_play():
     )
     fen_play.pack()
 
-    # Création de la ligne du haut
-    fen_play.create_line(
-        0, 0, play_width + 1, 0, fill=color_foreground, width=10
-    )
-    # Création de la ligne du bas
-    fen_play.create_line(
-        0,
-        play_height,
-        play_width + 1,
-        play_height,
-        fill=color_foreground,
-        width=10,
-    )
+    # Création des marquages du terrain de jeu
+    if cr_arena.get() == 0 or cr_arena.get() == 1:
+        # Création de la ligne du haut
+        fen_play.create_line(
+            0, 0, play_width + 1, 0, fill=color_foreground, width=10
+        )
+        # Création de la ligne du bas
+        fen_play.create_line(
+            0,
+            play_height,
+            play_width + 1,
+            play_height,
+            fill=color_foreground,
+            width=10,
+        )
 
-    # Séparation de la fenêtre en deux
-    fen_play.create_line(
-        half_play_width,
-        10,
-        half_play_width,
-        play_height - 10,
-        fill=color_foreground,
-        dash=(20, 10),
-        width=4,
-    )
-    # Démarcation des Zones de Buts
-    fen_play.create_line(
-        left_width_goal,
-        10,
-        left_width_goal,
-        play_height - 10,
-        fill=color_foreground,
-        dash=(6, 6),
-        width=2,
-    )
-    fen_play.create_line(
-        right_width_goal,
-        10,
-        right_width_goal,
-        play_height - 10,
-        fill=color_foreground,
-        dash=(6, 6),
-        width=2,
-    )
+        # Séparation de la fenêtre en deux
+        fen_play.create_line(
+            half_width_play,
+            10,
+            half_width_play,
+            play_height - 10,
+            fill=color_foreground,
+            dash=(20, 10),
+            width=4,
+        )
+
+        # Démarcation des Zones de Buts
+        fen_play.create_line(
+            left_width_goal,
+            10,
+            left_width_goal,
+            play_height - 10,
+            fill=color_foreground,
+            dash=(6, 6),
+            width=2,
+        )
+        fen_play.create_line(
+            right_width_goal,
+            10,
+            right_width_goal,
+            play_height - 10,
+            fill=color_foreground,
+            dash=(6, 6),
+            width=2,
+        )
+    elif cr_arena.get() == 2:
+        # Séparation de la fenêtre en deux
+        fen_play.create_line(
+            half_width_play,
+            0,
+            half_width_play,
+            play_height,
+            fill=color_foreground,
+            dash=(15, 5),
+            width=5,
+        )
+
+        # Création de la ligne antérieure au milieu
+        fen_play.create_line(
+            half_width_play - (middle_width_play - 30),
+            0,
+            half_width_play - (middle_width_play - 30),
+            play_height,
+            fill=color_foreground,
+            width=3,
+        )
+        # Création de la ligne postérieure au milieu
+        fen_play.create_line(
+            half_width_play + (middle_width_play - 30),
+            0,
+            half_width_play + (middle_width_play - 30),
+            play_height,
+            fill=color_foreground,
+            width=3,
+        )
+
+        # Création du motif central
+        fen_play.create_oval(
+            half_width_play - (middle_width_play - 50) / 2,
+            half_height_play - (middle_width_play - 50) / 2,
+            half_width_play + (middle_width_play - 50) / 2,
+            half_height_play + (middle_width_play - 50) / 2,
+            fill=color_background,
+            outline=color_foreground,
+            width=5,
+        )
+        fen_play.create_oval(
+            half_width_play - (middle_width_play - 62) / 2,
+            half_height_play - (middle_width_play - 62) / 2,
+            half_width_play + (middle_width_play - 62) / 2,
+            half_height_play + (middle_width_play - 62) / 2,
+            fill=color_background,
+            outline=color_foreground,
+            width=3,
+        )
+        fen_play.create_oval(
+            half_width_play - 4,
+            half_height_play - 4,
+            half_width_play + 4,
+            half_height_play + 4,
+            fill=color_foreground,
+            outline=color_foreground,
+            width=3,
+        )
+
     # Création des raquettes
     left_racket = fen_play.create_line(
         left_width_goal,
-        min_racket_height,
+        min_height_racket,
         left_width_goal,
-        max_racket_height,
+        max_height_racket,
         fill=color_rackets,
         width=6,
     )
     right_racket = fen_play.create_line(
         right_width_goal,
-        min_racket_height,
+        min_height_racket,
         right_width_goal,
-        max_racket_height,
+        max_height_racket,
         fill=color_rackets,
         width=6,
     )
@@ -732,15 +801,15 @@ def open_play():
 
     # Affichage des scores en début de partie
     display_left_score = fen_play.create_text(
-        half_play_width - middle_play_width,
-        half_play_height,
+        half_width_play - middle_width_play,
+        half_height_play,
         text=left_score,
         font=("Staatliches", "43"),
         fill=color_foreground,
     )
     display_right_score = fen_play.create_text(
-        half_play_width + middle_play_width,
-        half_play_height,
+        half_width_play + middle_width_play,
+        half_height_play,
         text=right_score,
         font=("Staatliches", "43"),
         fill=color_foreground,
