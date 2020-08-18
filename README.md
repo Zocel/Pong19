@@ -103,6 +103,16 @@ De plus, grâce aux boutons **`Refaire une partie`** et **`Aller au menu princip
 * retourner au menu principal pour :
 	* refaire une partie avec **de nouvelles configurations** ;
 	* quitter l'application `main.py`.
+	
+## Utilisation
+1. Clonez ce projet dans le répertoire de votre choix
+1. Une fois cloné, rendez-vous à partir d'un terminal dans celui-ci
+1. Tapez la commande suivante ``python3 main.py``
+
+Vous devriez alors obtenir alors les fenêtres suivantes:
+![Image réglage](https://cdn.discordapp.com/attachments/688501463005003828/745349612549701812/unknown.png)
+![Image partie](https://media.discordapp.net/attachments/688501463005003828/745349377954152448/unknown.png)
+![Image score](https://media.discordapp.net/attachments/688501463005003828/745349447550107800/unknown.png)
 
 ## Licence
 **GNU GENERAL PUBLIC LICENSE**
